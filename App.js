@@ -9,20 +9,26 @@ export default function App() {
     <View style={{
       backgroundColor: '#fff',
       flex: 1,
+      // By default, since this is a mobile device, the default flex-direction is 'column'
+      // flex-direction is called main axis
+      flexDirection: 'row',
     }}>
       <View style={{
         backgroundColor: 'dodgerblue',
-        flex: 2,
+        width: 100,
+        height: 100,
       }}
       />
       <View style={{
         backgroundColor: 'gold',
-        flex: 1,
+        width: 100,
+        height: 100,
       }}
       />
       <View style={{
         backgroundColor: 'tomato',
-        flex: 1,
+        width: 100,
+        height: 100,
       }}
       />
     </View>
