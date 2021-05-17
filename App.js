@@ -19,13 +19,7 @@ export default function App() {
     }}>
       <View style={{
         backgroundColor: 'dodgerblue',
-        // flexBasis: 100, // either width or height, depending on main axis
-        // flex: 1,
-
-        // If overflowing, this item can get shrunk
-        flexShrink: 1,
-        // flex: -1
-        width: 400,
+        width: 100,
         height: 100,
       }}
       />
@@ -33,6 +27,13 @@ export default function App() {
         backgroundColor: 'gold',
         width: 100,
         height: 100,
+        top: 20,
+        left: 20,
+        // Absolute is positioned relative to parent, affects layout
+        position: 'absolute',
+
+        // Default position, does not change the layout
+        // position: 'relative',
       }}
       />
       <View style={{
