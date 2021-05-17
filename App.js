@@ -16,16 +16,17 @@ export default function App() {
       justifyContent: 'center',
       // Align items along the SECONDARY axis
       alignItems: 'center',
-      // This messes up the vertical alignment
-      flexWrap: 'wrap',
-      // Set align-content to fix this
-      // Only takes effect with wrapping
-      alignContent: 'center'
     }}>
       <View style={{
         backgroundColor: 'dodgerblue',
-        width: 100,
-        height: 300,
+        // flexBasis: 100, // either width or height, depending on main axis
+        // flex: 1,
+
+        // If overflowing, this item can get shrunk
+        flexShrink: 1,
+        // flex: -1
+        width: 400,
+        height: 100,
       }}
       />
       <View style={{
@@ -36,21 +37,6 @@ export default function App() {
       />
       <View style={{
         backgroundColor: 'tomato',
-        width: 100,
-        height: 100,
-      }}
-      />
-      <View style={{
-        backgroundColor: 'grey',
-        width: 100,
-        height: 100,
-      }}
-      />
-      {/* By default, if the items overflow along the main axis,
-      one or more items get shrunk, so other items can fit on the screen */}
-      {/* Change this behavior by enabling wrapping */}
-      <View style={{
-        backgroundColor: 'greenyellow',
         width: 100,
         height: 100,
       }}
